@@ -9,7 +9,9 @@ class Loader {
 
   private function load(){
     $directories = array(
-            DOC_ROOT.'/app/controllers/'
+            DOC_ROOT.'/app/controllers/',
+            DOC_ROOT.'/app/models/'
+
           );
 foreach ($directories as $directory) {
     foreach(glob($directory . "*.php") as $class) {
