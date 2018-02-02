@@ -13,7 +13,7 @@ protected function load_view($name)
   if(file_exists($view_path)){
       include_once $view_path;
   } else {
-    echo $view_path . ' not exists';
+    die('view '.  $name.'.php doesnt exists!' );
   }
 
 
