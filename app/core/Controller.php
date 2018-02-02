@@ -2,19 +2,19 @@
 
 class Controller
 {
-  protected $models = array();
 
 
+protected function model($name){
+  $model_path = DOC_ROOT . '/app/models/'.$name.'.php';
 
+  if(file_exists($model_path)){
+      include_once $model_path;
+      return new $name();
+  } else {
+    die('model '.  $name.'.php doesnt exists!' );
+    ErrorHandler::error("Model: ".$name.".php doesnt exists!");
+  }
 
-protected function get_model($name)
-{
-  return $this->models[$name];
-}
-
-protected function add_model($name,$model)
-{
-  $this->$models[$name] = $model;
 }
 
 protected function load_view($name)
@@ -24,7 +24,7 @@ protected function load_view($name)
   if(file_exists($view_path)){
       include_once $view_path;
   } else {
-    die('view '.  $name.'.php doesnt exists!' );
+    ErrorHandler::error("View: ".$name.".php doesnt exists!");
   }
 
 

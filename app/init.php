@@ -7,7 +7,7 @@ require_once 'app/core/Loader.php';
 
 
 
-
+require_once 'app/core/ErrorHandler.php';
 require_once 'app/core/Controller.php';
 require_once 'app/core/Model.php';
 

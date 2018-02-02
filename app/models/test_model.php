@@ -8,7 +8,7 @@ public function __construct()
 
 public function test()
 {
-  echo 'test';
+  echo 'this is test model';
 }
 
 
