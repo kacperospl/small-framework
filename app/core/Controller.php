@@ -2,9 +2,16 @@
 
 class Controller
 {
+  protected $models = array();
 
 
 
+
+
+protected function add_model($name,$model)
+{
+$this->$models[$name] = $model;
+}
 
 protected function load_view($name)
 {

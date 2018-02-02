@@ -1,6 +1,6 @@
 <?php
 
-class Autoload {
+class Loader {
 
 
   public function __construct(){
