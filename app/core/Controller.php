@@ -7,10 +7,14 @@ class Controller
 
 
 
+protected function get_model($name)
+{
+  return $this->models[$name];
+}
 
 protected function add_model($name,$model)
 {
-$this->$models[$name] = $model;
+  $this->$models[$name] = $model;
 }
 
 protected function load_view($name)
