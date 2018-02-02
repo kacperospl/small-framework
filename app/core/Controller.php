@@ -4,6 +4,7 @@ class Controller
 {
 
 
+
 protected function model($name){
   $model_path = DOC_ROOT . '/app/models/'.$name.'.php';
 
@@ -11,10 +12,16 @@ protected function model($name){
       include_once $model_path;
       return new $name();
   } else {
-    die('model '.  $name.'.php doesnt exists!' );
     ErrorHandler::error("Model: ".$name.".php doesnt exists!");
   }
 
+}
+
+
+protected function modelFunction($name,$function,$args)
+{
+    $tmp_model = $this->model($name);
+    call_user_func_array(array($tmp_model, $function), $args);
 }
 
 protected function load_view($name)

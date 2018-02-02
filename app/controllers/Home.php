@@ -6,7 +6,10 @@ class Home extends Controller
   {
     $this->index();
     $test_model =  $this->model('test_model');
-    $test_model->test();
+    $this->modelFunction('test_model', 'test', array());
+    $this->modelFunction('test_model', 'argtest', array('arguments'));
+
+
   }
 
   public function index(){
