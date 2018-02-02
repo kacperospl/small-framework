@@ -8,7 +8,7 @@ class Home extends Controller
   }
 
   public function index(){
-    echo 'home/index';
+    $this->load_view('test_view');
   }
 
 
