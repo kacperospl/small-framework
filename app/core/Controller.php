@@ -21,7 +21,10 @@ protected function model($name){
 protected function modelFunction($name,$function,$args)
 {
     $tmp_model = $this->model($name);
-    call_user_func_array(array($tmp_model, $function), $args);
+    if(method_exists($tmp_model, $function))
+    {
+        call_user_func_array(array($tmp_model, $function), $args);  
+    }
 }
 
 protected function load_view($name)
