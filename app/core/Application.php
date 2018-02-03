@@ -3,10 +3,10 @@
 class Application
 {
   public $router;
-
+  public static $config;
   public function __construct(){
+    
     $this->router = new \Klein\Klein();
-
     $this->setup_routes();
   }
 

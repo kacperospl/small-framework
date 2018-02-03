@@ -3,6 +3,10 @@
 
 define('DOC_ROOT', $_SERVER['DOCUMENT_ROOT']);
 
+
+
+
+require_once 'app/config.php';
 require_once 'app/core/ClassLoader.php';
 
 
