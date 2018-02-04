@@ -21,6 +21,3 @@ require_once 'app/routes.php';
 require_once 'app/core/Application.php';
 
 $autoload = new ClassLoader();
-
-
- ?>

@@ -2,21 +2,12 @@
 
 class Database
 {
+    private $config;
 
-  private $config;
+    public $pdo;
 
-  public $pdo;
-
-  public function __construct()
-  {
-    $this->config = Config::$database;
-
-  }
-
-
-
-
+    public function __construct()
+    {
+        $this->config = Config::$database;
+    }
 }
-
-
-?>

@@ -2,10 +2,9 @@
 
 class ErrorHandler
 {
-
-public static function error($msg)
-{
-    echo '
+    public static function error($msg)
+    {
+        echo '
       <style>
       #error_msg {
         background-color:red;
@@ -17,10 +16,5 @@ public static function error($msg)
 
       </div>
     ';
+    }
 }
-
-
-}
-
-
-?>

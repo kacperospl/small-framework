@@ -3,19 +3,12 @@
   //How to use:
   // ex: Config::$database['username']
 
-  Class Config
+  class Config
   {
-
-    static $database = array
-    (
+      public static $database = array(
       'host' => 'localhost',
       'password' => '',
       'db_name' => 'sframework',
       'username' => 'root'
     );
-
-
-
   }
-
-?>
