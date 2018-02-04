@@ -12,7 +12,7 @@ require_once $root. '/app/init.php';
 $app = new Application();
 
 
-$app->dispatch();
+$app->router->dispatch();
 
 
  ?>

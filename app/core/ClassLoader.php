@@ -4,17 +4,12 @@ class ClassLoader
 {
     public function __construct()
     {
-        $this->load();
+        $this->_load();
     }
 
-    private function load()
+    private function _load()
     {
-        $directories = array(
-            DOC_ROOT.'/app/controllers/',
-            DOC_ROOT.'/app/models/'
-
-          );
-        foreach ($directories as $directory) {
+        foreach (Config::$classLoaderPaths as $directory) {
             foreach (glob($directory . "*.php") as $class) {
                 include_once $class;
             }

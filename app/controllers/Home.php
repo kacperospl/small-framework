@@ -11,7 +11,7 @@ class Home extends Controller
 
     public function index()
     {
-        $this->load_view('welcome_view');
+        $this->loadView('welcome_view');
     }
 
     public function test()

@@ -2,7 +2,7 @@
 
 class ErrorHandler
 {
-    public static function error($msg)
+    public static function Error($msg)
     {
         echo '
       <style>

@@ -1,10 +1,13 @@
 <?php
 
-class Controller
+abstract class Controller
 {
 
 
-//getting model
+    public abstract function index();
+
+
+    //getting model
     //eg   $test_model = $this->model('test_model');
     protected function model($name)
     {
@@ -14,7 +17,7 @@ class Controller
             include_once $model_path;
             return new $name();
         } else {
-            ErrorHandler::error("Model: ".$name.".php doesnt exists!");
+            ErrorHandler::Error("Model: ".$name.".php doesnt exists!");
         }
     }
 
@@ -31,14 +34,14 @@ class Controller
 
     //loading view
     //eg   $this->load_view('test_view');
-    protected function load_view($name)
+    protected function loadView($name)
     {
         $view_path = DOC_ROOT . '/app/views/'.$name.'.php';
 
         if (file_exists($view_path)) {
             include_once $view_path;
         } else {
-            ErrorHandler::error("View: ".$name.".php doesnt exists!");
+            ErrorHandler::Error("View: ".$name.".php doesnt exists!");
         }
     }
 }
