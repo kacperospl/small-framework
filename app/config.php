@@ -7,7 +7,7 @@
   {
       public static $database = array(
       'host' => 'localhost',
-      'password' => '',
+      'password' => 'root123',
       'db_name' => 'sframework',
       'username' => 'root'
     );

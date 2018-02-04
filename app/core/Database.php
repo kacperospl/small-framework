@@ -1,13 +1,26 @@
 <?php
 
-class Database
-{
-    private $config;
+  class Database
+  {
+    private $_connection;
 
-    public $pdo;
 
     public function __construct()
     {
-        $this->config = Config::$database;
+      try {
+          $this->_connection = new PDO('mysql:host='.Config::$database['host'].';dbname='.Config::$database['db_name'].'', Config::$database['username'], Config::$database['password']);
+      } catch (PDOException $exception) {
+          ErrorHandler::Error('Cannot connect to database: ' . $exception->getMessage());
+      }
+
     }
-}
+
+
+
+
+
+  }
+
+
+
+?>

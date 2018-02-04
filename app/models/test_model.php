@@ -9,8 +9,15 @@ class test_model extends Model
 
     public function test()
     {
-        echo 'this is test model';
-        echo '<br>';
+      $res =  $this->database->query('SELECT * FROM `newsletter`');
+
+      foreach ($res as $row) {
+        echo $row['ID'] ;
+        echo $row['mail'] ;
+            echo '<br>';
+     }
+
+
     }
 
     public function argtest($text)
