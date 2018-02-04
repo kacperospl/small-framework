@@ -13,6 +13,7 @@ require_once 'app/core/ClassLoader.php';
 
 require_once 'app/core/ErrorHandler.php';
 require_once 'app/core/Controller.php';
+require_once 'app/core/Database.php';
 require_once 'app/core/Model.php';
 
 

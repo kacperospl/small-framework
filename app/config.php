@@ -8,8 +8,10 @@
 
     static $database = array
     (
-      'username' => 'localhost'
-
+      'host' => 'localhost',
+      'password' => '',
+      'db_name' => 'sframework',
+      'username' => 'root'
     );
 
 
