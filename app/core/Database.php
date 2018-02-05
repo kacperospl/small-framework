@@ -14,14 +14,17 @@
           }
       }
 
-      public function execute($statement,$args)
+      //executes INSERT,DELETE,UPDATE etc
+      // eg execute('INSERT INTO eg (arg1) VALUES (?)', ['arg1']);
+      public function execute($statement, $args)
       {
-
-       $this->_connection->prepare($statement)->execute($args);
+          $this->_connection->prepare($statement)->execute($args);
       }
 
+      //runs queries
+      //eg: query('SELECT * FROM `newsletter`');
       public function query($statement)
       {
-        return $this->_connection->query($statement);
+          return $this->_connection->query($statement);
       }
   }
