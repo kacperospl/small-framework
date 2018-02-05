@@ -6,25 +6,9 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit520a332652cf465a60bf4d3675bae94a
 {
-    public static $prefixLengthsPsr4 = array (
-        'B' => 
-        array (
-            'Buki\\' => 5,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'Buki\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/izniburak/router/src',
-        ),
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit520a332652cf465a60bf4d3675bae94a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit520a332652cf465a60bf4d3675bae94a::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

@@ -6,5 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Buki\\' => array($vendorDir . '/izniburak/router/src'),
 );
