@@ -6,14 +6,15 @@ class Login_controller
   public function __construct()
   {
     parent::__construct();
+    echo 'construct';
   }
 
-  public function login()
+  public function login($login,$password)
   {
     echo "test";
-    echo $_POST["login"];
+    echo $login;
     echo '<br>';
-    echo $_POST["password"];
+    echo $password;
   }
 
 
