@@ -10,8 +10,7 @@ class Home extends Controller
     public function index()
     {
         $this->loadView('welcome_view');
-        Session::AddSessionVariable('a','xds');
-        echo Session::GetSessionVariable('a');
+        $this->loadView('login_view');
     }
 
 

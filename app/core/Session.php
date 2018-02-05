@@ -10,6 +10,7 @@ class Session
     session_start();
   }
 
+  
   public static function AddSessionVariable($name,$value)
   {
     $_SESSION[Config::$session['session_name']] = [$name => $value];

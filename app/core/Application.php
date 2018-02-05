@@ -8,7 +8,7 @@ class Application
 
     public function __construct()
     {
-        $this->router = new \Klein\Klein();
+        $this->router = new \Buki\Router();
         $this->_setupRoutes();
 
     }

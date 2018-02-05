@@ -1,33 +1,28 @@
 [
     {
-        "name": "klein/klein",
-        "version": "v2.1.2",
-        "version_normalized": "2.1.2.0",
+        "name": "izniburak/router",
+        "version": "v1.1.2",
+        "version_normalized": "1.1.2.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/klein/klein.php.git",
-            "reference": "6549676cc831b9417332b3d9485c64bbf7bac728"
+            "url": "https://github.com/izniburak/php-router.git",
+            "reference": "89fda9dd2eacbe92c25b2aa42a46fcbc1e0a96e4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/klein/klein.php/zipball/6549676cc831b9417332b3d9485c64bbf7bac728",
-            "reference": "6549676cc831b9417332b3d9485c64bbf7bac728",
+            "url": "https://api.github.com/repos/izniburak/php-router/zipball/89fda9dd2eacbe92c25b2aa42a46fcbc1e0a96e4",
+            "reference": "89fda9dd2eacbe92c25b2aa42a46fcbc1e0a96e4",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3.0"
+            "php": ">=5.4.0"
         },
-        "require-dev": {
-            "phpunit/php-code-coverage": "^2.2",
-            "phpunit/phpunit": "^4.8",
-            "squizlabs/php_codesniffer": "1.4.8"
-        },
-        "time": "2017-02-01T23:08:58+00:00",
+        "time": "2018-01-20T18:19:54+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Klein\\": "src/Klein/"
+                "Buki\\": "src"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -36,25 +31,18 @@
         ],
         "authors": [
             {
-                "name": "Chris O'Hara",
-                "email": "cohara87@gmail.com",
-                "homepage": "http://chris6f.com/",
-                "role": "Creator/Developer"
-            },
-            {
-                "name": "Trevor Suarez",
-                "email": "rican7@gmail.com",
-                "homepage": "https://trevorsuarez.com/",
-                "role": "Contributor/Developer"
+                "name": "İzni Burak Demirtaş",
+                "email": "info@burakdemirtas.org",
+                "homepage": "http://burakdemirtas.org"
             }
         ],
-        "description": "A lightning fast router for PHP",
-        "homepage": "https://github.com/klein/klein.php",
+        "description": "simple router class for php",
+        "homepage": "https://github.com/izniburak/php-router",
         "keywords": [
-            "boilerplate",
-            "router",
-            "routing",
-            "sinatra"
+            "Simple",
+            "php",
+            "route",
+            "router"
         ]
     }
 ]
