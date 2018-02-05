@@ -4,11 +4,10 @@ class Application
 {
     public $router;
 
-    public static $config;
 
     public function __construct()
     {
-        $this->router = new \Buki\Router();
+        $this->router = new  \Klein\Klein();
         $this->_setupRoutes();
 
     }
