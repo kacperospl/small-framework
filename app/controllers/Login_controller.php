@@ -1,20 +1,21 @@
 <?php
 
-class Login_controller
+class Login_controller extends Controller
 {
 
-  public function __construct()
+
+
+  public function index()
   {
-    parent::__construct();
-    echo 'construct';
+
   }
 
-  public function login($login,$password)
+  public function login()
   {
-    echo "test";
-    echo $login;
-    echo '<br>';
-    echo $password;
+    $login = $_POST['login'];
+    $password = $_POST['password'];
+
+    $this->modelFunction('Login_model','verifyUser',[$login,$password]);
   }
 
 

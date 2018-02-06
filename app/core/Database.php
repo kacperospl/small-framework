@@ -18,7 +18,13 @@
       // eg execute('INSERT INTO eg (arg1) VALUES (?)', ['arg1']);
       public function execute($statement, $args)
       {
-          $this->_connection->prepare($statement)->execute($args);
+          $prepared = $this->_connection->prepare($statement);
+
+          if (!$prepared) {
+              ErrorHandler::Error("Failed preparing sql: ". $this->_connection->errirInfo());
+          } else {
+              return  $prepared->execute();
+          }
       }
 
       //runs queries

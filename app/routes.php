@@ -4,20 +4,13 @@ class Routes
 {
     public function setup_routes($router)
     {
-
-
         $router->respond('GET', '/', function () {
-           $home = new Home();
+            $home = new Home();
         });
 
-        $router->respond('GET', '/login', function ($request,$response) {
-
-        return $request->validate();
-
-
+        $router->respond('POST', '/login', function ($request, $response) {
+            $login = new Login_controller();
+            $login->login();
         });
-
-
-
     }
 }
