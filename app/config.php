@@ -5,6 +5,10 @@
 
   class Config
   {
+      public static $other = array(
+        'error_reporting' => true
+      );
+
       public static $database = array(
       'host' => '127.0.0.1',
       'port' => '3307',

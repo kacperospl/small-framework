@@ -4,7 +4,8 @@ class ErrorHandler
 {
     public static function Error($msg)
     {
-        echo '
+        if (Config::$other['error_reporting']) {
+            echo '
       <style>
       #error_msg {
         background-color:red;
@@ -16,5 +17,6 @@ class ErrorHandler
 
       </div>
     ';
+        }
     }
 }

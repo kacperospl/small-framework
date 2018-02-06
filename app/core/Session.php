@@ -22,6 +22,6 @@ class Session
 
     public static function DeleteSessionVariable($name)
     {
-      unset($_SESSION[Config::$session['session_name']] [$name]);
+        unset($_SESSION[Config::$session['session_name']] [$name]);
     }
 }

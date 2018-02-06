@@ -26,7 +26,7 @@ abstract class Controller
     {
         $tmp_model = $this->model($name);
         if (method_exists($tmp_model, $function)) {
-          return call_user_func_array(array($tmp_model, $function), $args);
+            return call_user_func_array(array($tmp_model, $function), $args);
         }
     }
 
