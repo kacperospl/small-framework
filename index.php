@@ -13,6 +13,3 @@ $app = new Application();
 Session::StartSession();
 
 $app->router->dispatch();
-
-
- ?>

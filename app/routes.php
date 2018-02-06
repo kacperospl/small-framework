@@ -12,5 +12,10 @@ class Routes
             $login = new Login_controller();
             $login->login();
         });
+
+        $router->respond('GET', '/logout', function ($request, $response) {
+            $login = new Login_controller();
+            $login->logout();
+        });
     }
 }

@@ -23,7 +23,7 @@
         DOC_ROOT.'/app/models/'
     );
 
-      public static $session = array (
+      public static $session = array(
         'session_name' => 'framework_variables'
       );
   }

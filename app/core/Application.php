@@ -9,14 +9,11 @@ class Application
     {
         $this->router = new  \Klein\Klein();
         $this->_setupRoutes();
-
     }
 
     private function _setupRoutes()
     {
         $routeList = new Routes();
         $routeList->setup_routes($this->router);
-
     }
-
 }
