@@ -4,13 +4,14 @@
   // ex: Config::$database['username']
 
   namespace App;
-  class Config
-  {
-      public static $other = array(
+
+class Config
+{
+    public static $other = array(
         'error_reporting' => true
       );
 
-      public static $database = array(
+    public static $database = array(
       'host' => '127.0.0.1',
       'port' => '3307',
       'password' => 'root123',
@@ -18,17 +19,17 @@
       'username' => 'root'
     );
 
-      public static $resources = array(
+    public static $resources = array(
       'css' => DOC_ROOT.'/public/resources/css/',
       'js' => DOC_ROOT.'/public/resources/js/'
     );
 
-      public static $classLoaderPaths = array(
+    public static $classLoaderPaths = array(
         DOC_ROOT.'/app/controllers/',
         DOC_ROOT.'/app/models/'
     );
 
-      public static $session = array(
+    public static $session = array(
         'session_name' => 'framework_variables'
       );
-  }
+}

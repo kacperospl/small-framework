@@ -1,5 +1,6 @@
 <?php
 namespace App\Models;
+
 class User_model extends \Framework\Core\Model
 {
     public function __construct()

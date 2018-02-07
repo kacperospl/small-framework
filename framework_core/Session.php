@@ -17,6 +17,11 @@ class Session
         $_SESSION[\App\Config::$session['session_name']] = [$name => $value];
     }
 
+    public function setSessionVariable($name,$value)
+    {
+        $_SESSION[\App\Config::$session['session_name']] = [$name => $value];
+    }
+
     public  function getSessionVariable($name)
     {
         return $_SESSION[\App\Config::$session['session_name']][$name];
