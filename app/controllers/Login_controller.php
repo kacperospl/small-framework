@@ -15,7 +15,7 @@ class Login_controller extends \Framework\Core\Controller
     public function logout()
     {
         $this->session->deleteSessionVariable('isLogged');
-        \Framework\Utills\Helper::Redirect('/', false);
+      $this->helper->redirect('/', false);
     }
 
     public function login()
@@ -25,10 +25,10 @@ class Login_controller extends \Framework\Core\Controller
 
         if ($this->modelFunction('User_model', 'login', [$login,$password])) {
             $this->session->addSessionVariable('isLogged', true);
-            \Framework\Utills\Helper::Redirect('/', false);
+            $this->helper->redirect('/', false);
         } else {
             $this->session->addSessionVariable('isLogged', false);
-            \Framework\Utills\Helper::Redirect('/', false);
+              $this->helper->redirect('/', false);
         }
     }
 }
