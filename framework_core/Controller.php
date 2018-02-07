@@ -1,5 +1,7 @@
 <?php
 
+namespace Framework\Core;
+
 abstract class Controller
 {
     abstract public function index();
@@ -12,8 +14,9 @@ abstract class Controller
         $model_path = DOC_ROOT . '/app/models/'.$name.'.php';
 
         if (file_exists($model_path)) {
-            include_once $model_path;
-            return new $name();
+            require_once $model_path;
+            $namespaced = "\App\Models\\".$name;
+            return new $namespaced();
         } else {
             ErrorHandler::Error("Model: ".$name.".php doesnt exists!");
         }

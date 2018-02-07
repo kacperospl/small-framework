@@ -3,6 +3,7 @@
   //How to use:
   // ex: Config::$database['username']
 
+  namespace App;
   class Config
   {
       public static $other = array(

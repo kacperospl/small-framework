@@ -1,6 +1,6 @@
 <?php
 
-
+namespace Framework;
 define('DOC_ROOT', $_SERVER['DOCUMENT_ROOT']);
 
 
@@ -20,5 +20,18 @@ require_once 'Model.php';
 
 
 require_once 'Application.php';
+
+use App\Config;
+
+use Framework\Utills\Helper as Helper;
+
+use Framework\Core\ClassLoader as ClassLoader;
+use Framework\Utills\Database as DataBase;
+use Framework\Utills\Session as Session;
+use Framework\Utills\ErrorHandler as ErrorHandler;
+use Framework\Core\Controller as Controller;
+use Framework\Core\Model as Model;
+
+use Framework\Core\Application as Application;
 
 $autoload = new ClassLoader();

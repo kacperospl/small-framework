@@ -1,5 +1,7 @@
 <?php
 
+namespace Framework\Utills;
+
 class Session
 {
     private static $_sessionArray = array();
@@ -12,16 +14,16 @@ class Session
 
     public static function AddSessionVariable($name, $value)
     {
-        $_SESSION[Config::$session['session_name']] = [$name => $value];
+        $_SESSION[\App\Config::$session['session_name']] = [$name => $value];
     }
 
     public static function GetSessionVariable($name)
     {
-        return $_SESSION[Config::$session['session_name']][$name];
+        return $_SESSION[\App\Config::$session['session_name']][$name];
     }
 
     public static function DeleteSessionVariable($name)
     {
-        unset($_SESSION[Config::$session['session_name']] [$name]);
+        unset($_SESSION[\App\Config::$session['session_name']] [$name]);
     }
 }

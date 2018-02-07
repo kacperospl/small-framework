@@ -1,6 +1,6 @@
 <?php
 
-
+namespace Framework;
 
 require_once 'vendor/autoload.php';
 
@@ -10,6 +10,6 @@ require_once $root. '/framework_core/init.php';
 
 
 $app = new Application();
-Session::StartSession();
+Utills\Session::StartSession();
 
 $app->router->dispatch();

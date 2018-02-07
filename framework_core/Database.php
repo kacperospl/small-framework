@@ -1,5 +1,6 @@
 <?php
 
+  namespace Framework\Utills;
   class Database
   {
       private $_connection;

@@ -1,6 +1,6 @@
 <?php
-
-class Login_controller extends Controller
+namespace App\Controllers;
+class Login_controller extends \Framework\Core\Controller
 {
     public function index()
     {
@@ -8,8 +8,8 @@ class Login_controller extends Controller
 
     public function logout()
     {
-        Session::DeleteSessionVariable('isLogged');
-        Helper::Redirect('/', false);
+        \Framework\Utills\Session::DeleteSessionVariable('isLogged');
+        \Framework\Utills\Helper::Redirect('/', false);
     }
 
     public function login()
@@ -18,11 +18,11 @@ class Login_controller extends Controller
         $password = $_POST['password'];
 
         if ($this->modelFunction('User_model', 'login', [$login,$password])) {
-            Session::AddSessionVariable('isLogged', true);
-            Helper::Redirect('/', false);
+              \Framework\Utills\Session::AddSessionVariable('isLogged', true);
+              \Framework\Utills\Helper::Redirect('/', false);
         } else {
-            Session::AddSessionVariable('isLogged', false);
-            Helper::Redirect('/', false);
+              \Framework\Utills\Session::AddSessionVariable('isLogged', false);
+              \Framework\Utills\Helper::Redirect('/', false);
         }
     }
 }

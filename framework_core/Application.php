@@ -1,5 +1,7 @@
 <?php
 
+namespace Framework;
+
 class Application
 {
     public $router;

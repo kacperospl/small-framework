@@ -1,5 +1,7 @@
 <?php
 
+namespace Framework\Core;
+
 class ClassLoader
 {
     public function __construct()
@@ -9,9 +11,11 @@ class ClassLoader
 
     private function _load()
     {
-        foreach (Config::$classLoaderPaths as $directory) {
+        foreach (\App\Config::$classLoaderPaths as $directory) {
             foreach (glob($directory . "*.php") as $class) {
-                include_once $class;
+
+                require_once $class;
+
             }
         }
     }

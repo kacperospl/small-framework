@@ -1,5 +1,6 @@
 <?php
 
+  namespace Framework\Utills;
   class Helper
   {
       public static function Redirect($url, $permanent = false)
