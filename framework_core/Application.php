@@ -8,15 +8,11 @@ class Application
     public function __construct()
     {
         $this->router = new  \Klein\Klein();
-        $this->_setupRoutes();
+          require_once DOC_ROOT. '/app/routes.php';
         $this->HandleErrorCodes();
     }
 
-    private function _setupRoutes()
-    {
-        $routeList = new Routes();
-        $routeList->setup_routes($this->router);
-    }
+
 
     private function HandleErrorCodes()
     {

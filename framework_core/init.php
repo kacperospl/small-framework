@@ -19,7 +19,6 @@ require_once 'Controller.php';
 require_once 'Model.php';
 
 
-require_once  DOC_ROOT .'/app/routes.php';
 require_once 'Application.php';
 
 $autoload = new ClassLoader();
