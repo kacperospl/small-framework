@@ -17,5 +17,8 @@ class Routes
             $login = new Login_controller();
             $login->logout();
         });
+
+
+
     }
 }
