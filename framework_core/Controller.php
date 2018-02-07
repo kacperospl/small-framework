@@ -34,12 +34,12 @@ abstract class Controller
     //eg   $this->load_view('test_view');
     protected function loadView($name)
     {
-        $view_path = DOC_ROOT . '/app/views/'.$name.'.html';
+        $view_path = DOC_ROOT . '/app/views/'.$name.'.php';
 
         if (file_exists($view_path)) {
             include_once $view_path;
         } else {
-            ErrorHandler::Error("View: ".$name.".html doesnt exists!");
+            ErrorHandler::Error("View: ".$name.".php doesnt exists!");
         }
     }
 }
