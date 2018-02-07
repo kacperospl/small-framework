@@ -10,7 +10,7 @@ class Application
     public function __construct()
     {
         $this->router = new  \Klein\Klein();
-          require_once DOC_ROOT. '/app/routes.php';
+        require_once DOC_ROOT. '/app/routes.php';
         $this->HandleErrorCodes();
     }
 
@@ -20,7 +20,6 @@ class Application
     {
         $this->router->onHttpError(function ($code, $router) {
             include_once 'html_templates/http_error.php';
-
         });
     }
 }

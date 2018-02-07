@@ -8,8 +8,8 @@ abstract class Controller
     protected $helper;
     public function __construct()
     {
-      $this->session = new \Framework\Utills\Session();
-      $this->helper = new \Framework\Utills\Helper();
+        $this->session = new \Framework\Utills\Session();
+        $this->helper = new \Framework\Utills\Helper();
     }
 
     abstract public function index();

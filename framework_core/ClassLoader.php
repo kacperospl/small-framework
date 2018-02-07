@@ -13,9 +13,7 @@ class ClassLoader
     {
         foreach (\App\Config::$classLoaderPaths as $directory) {
             foreach (glob($directory . "*.php") as $class) {
-
                 require_once $class;
-
             }
         }
     }

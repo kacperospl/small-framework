@@ -1,7 +1,9 @@
 <?php
 
 namespace Framework\Core;
+
 use App\Config as Config;
+
 class Model
 {
     public $database;

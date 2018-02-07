@@ -1,6 +1,7 @@
 <?php
 
 namespace Framework;
+
 define('DOC_ROOT', $_SERVER['DOCUMENT_ROOT']);
 
 
