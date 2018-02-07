@@ -1,14 +1,20 @@
 <?php
 namespace App\Controllers;
+
 class Login_controller extends \Framework\Core\Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     public function index()
     {
     }
 
     public function logout()
     {
-        \Framework\Utills\Session::DeleteSessionVariable('isLogged');
+        $this->session->deleteSessionVariable('isLogged');
         \Framework\Utills\Helper::Redirect('/', false);
     }
 
@@ -18,11 +24,11 @@ class Login_controller extends \Framework\Core\Controller
         $password = $_POST['password'];
 
         if ($this->modelFunction('User_model', 'login', [$login,$password])) {
-              \Framework\Utills\Session::AddSessionVariable('isLogged', true);
-              \Framework\Utills\Helper::Redirect('/', false);
+            $this->session->addSessionVariable('isLogged', true);
+            \Framework\Utills\Helper::Redirect('/', false);
         } else {
-              \Framework\Utills\Session::AddSessionVariable('isLogged', false);
-              \Framework\Utills\Helper::Redirect('/', false);
+            $this->session->addSessionVariable('isLogged', false);
+            \Framework\Utills\Helper::Redirect('/', false);
         }
     }
 }

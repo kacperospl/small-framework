@@ -10,6 +10,8 @@ require_once $root. '/framework_core/init.php';
 
 
 $app = new Application();
-Utills\Session::StartSession();
+
+$session = new \Framework\Utills\Session();
+$session->startSession();
 
 $app->router->dispatch();

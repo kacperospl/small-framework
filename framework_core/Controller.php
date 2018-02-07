@@ -4,6 +4,13 @@ namespace Framework\Core;
 
 abstract class Controller
 {
+    protected $session;
+
+    public function __construct()
+    {
+      $this->session = new \Framework\Utills\Session();
+    }
+
     abstract public function index();
 
 

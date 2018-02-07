@@ -4,25 +4,25 @@ namespace Framework\Utills;
 
 class Session
 {
-    private static $_sessionArray = array();
+    private  $_sessionArray = array();
 
-    public static function StartSession()
+    public  function startSession()
     {
         session_start();
     }
 
 
-    public static function AddSessionVariable($name, $value)
+    public  function addSessionVariable($name, $value)
     {
         $_SESSION[\App\Config::$session['session_name']] = [$name => $value];
     }
 
-    public static function GetSessionVariable($name)
+    public  function getSessionVariable($name)
     {
         return $_SESSION[\App\Config::$session['session_name']][$name];
     }
 
-    public static function DeleteSessionVariable($name)
+    public  function deleteSessionVariable($name)
     {
         unset($_SESSION[\App\Config::$session['session_name']] [$name]);
     }
