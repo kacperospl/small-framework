@@ -7,11 +7,11 @@
 
 class Config
 {
-    public static $other = array(
+    public  $other = array(
         'error_reporting' => true
       );
 
-    public static $database = array(
+    public  $database = array(
       'host' => '127.0.0.1',
       'port' => '3307',
       'password' => 'root123',
@@ -19,17 +19,17 @@ class Config
       'username' => 'root'
     );
 
-    public static $resources = array(
+    public  $resources = array(
       'css' => DOC_ROOT.'/public/resources/css/',
       'js' => DOC_ROOT.'/public/resources/js/'
     );
 
-    public static $classLoaderPaths = array(
+    public  $classLoaderPaths = array(
         DOC_ROOT.'/app/controllers/',
         DOC_ROOT.'/app/models/'
     );
 
-    public static $session = array(
+    public  $session = array(
         'session_name' => 'framework_variables'
       );
 }

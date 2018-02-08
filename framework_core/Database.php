@@ -5,12 +5,13 @@
 class Database
 {
     private $_connection;
-
+    private $config;
 
     public function __construct()
     {
+      $this->config = new \App\Config();
         try {
-            $this->_connection = new PDO('mysql:host='.Config::$database['host'].';port='.Config::$database['port'].';dbname='.Config::$database['db_name'].'', Config::$database['username'], Config::$database['password']);
+            $this->_connection = new PDO('mysql:host='.$this->config->database['host'].';port='.$this->config->database['port'].';dbname='.$this->config->database['db_name'].'', $this->config->database['username'], $this->config->database['password']);
         } catch (PDOException $exception) {
             ErrorHandler::Error('Cannot connect to database: ' . $exception->getMessage());
         }

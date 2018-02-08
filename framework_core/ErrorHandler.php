@@ -4,9 +4,12 @@ namespace Framework\Utills;
 
 class ErrorHandler
 {
+
+
     public static function Error($msg)
     {
-        if (\App\Config::$other['error_reporting']) {
+        $config = new \App\Config();
+        if ($config->$other['error_reporting']) {
             echo '
       <style>
       #error_msg {
