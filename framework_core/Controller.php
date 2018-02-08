@@ -6,10 +6,12 @@ abstract class Controller
 {
     protected $session;
     protected $helper;
+    protected $view;
     public function __construct()
     {
         $this->session = new \Framework\Utills\Session();
         $this->helper = new \Framework\Utills\Helper();
+        $this->view = new View();
     }
 
     abstract public function index();
@@ -45,12 +47,6 @@ abstract class Controller
     //eg   $this->load_view('test_view');
     protected function loadView($name)
     {
-        $view_path = DOC_ROOT . '/app/views/'.$name.'.php';
 
-        if (file_exists($view_path)) {
-            include_once $view_path;
-        } else {
-            ErrorHandler::Error("View: ".$name.".php doesnt exists!");
-        }
     }
 }

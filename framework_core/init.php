@@ -12,7 +12,7 @@ require_once 'Helper.php';
 require_once 'ClassLoader.php';
 require_once 'Database.php';
 require_once 'Session.php';
-
+require_once 'View.php';
 
 require_once 'ErrorHandler.php';
 require_once 'Controller.php';
@@ -32,7 +32,7 @@ use Framework\Utills\Session as Session;
 use Framework\Utills\ErrorHandler as ErrorHandler;
 use Framework\Core\Controller as Controller;
 use Framework\Core\Model as Model;
-
+use Framework\Core\View as View;
 use Framework\Core\Application as Application;
 
 $autoload = new ClassLoader();

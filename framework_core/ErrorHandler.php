@@ -6,7 +6,7 @@ class ErrorHandler
 {
     public static function Error($msg)
     {
-        if (Config::$other['error_reporting']) {
+        if (\App\Config::$other['error_reporting']) {
             echo '
       <style>
       #error_msg {
