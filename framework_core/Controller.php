@@ -47,6 +47,5 @@ abstract class Controller
     //eg   $this->load_view('test_view');
     protected function loadView($name)
     {
-
     }
 }

@@ -1,12 +1,13 @@
 <?php
   namespace Framework\Core;
+
 class View
 {
     public function __construct()
     {
     }
 
-    public function loadView($name,array $data)
+    public function loadView($name, array $data)
     {
         $view_path = DOC_ROOT . '/app/views/'.$name.'.php';
 

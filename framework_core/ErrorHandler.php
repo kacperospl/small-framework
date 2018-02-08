@@ -4,8 +4,6 @@ namespace Framework\Utills;
 
 class ErrorHandler
 {
-
-
     public static function Error($msg)
     {
         $config = new \App\Config();

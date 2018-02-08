@@ -9,7 +9,7 @@ class Database
 
     public function __construct()
     {
-      $this->config = new \App\Config();
+        $this->config = new \App\Config();
         try {
             $this->_connection = new PDO('mysql:host='.$this->config->database['host'].';port='.$this->config->database['port'].';dbname='.$this->config->database['db_name'].'', $this->config->database['username'], $this->config->database['password']);
         } catch (PDOException $exception) {

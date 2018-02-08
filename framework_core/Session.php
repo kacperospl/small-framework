@@ -9,7 +9,7 @@ class Session
 
     public function __construct()
     {
-      $this->config = new \App\Config();
+        $this->config = new \App\Config();
     }
 
     public function startSession()
