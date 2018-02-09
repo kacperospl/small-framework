@@ -8,7 +8,8 @@
 class Config
 {
     public  $other = array(
-        'error_reporting' => true
+        'error_reporting' => true,
+        'benchmark' => true
       );
 
     public  $database = array(

@@ -7,7 +7,7 @@ class View
     {
     }
 
-    public function loadView($name, array $data)
+    public function loadView($name, array $dataset)
     {
         $view_path = DOC_ROOT . '/app/views/'.$name.'.php';
 

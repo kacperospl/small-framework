@@ -43,9 +43,5 @@ abstract class Controller
         }
     }
 
-    //loading view
-    //eg   $this->load_view('test_view');
-    protected function loadView($name)
-    {
-    }
+  
 }
