@@ -10,12 +10,12 @@ class Login_controller extends \Framework\Core\Controller
 
     public function index()
     {
-      $this->session->addSessionVariable('isLogged',false);
+        $this->session->addSessionVariable('isLogged', false);
     }
 
     public function logout()
     {
-        $this->session->setSessionVariable('isLogged',false);
+        $this->session->setSessionVariable('isLogged', false);
         $this->helper->redirect('/', false);
     }
 

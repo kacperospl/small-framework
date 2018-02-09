@@ -11,12 +11,12 @@ class Home extends \Framework\Core\Controller
 
     public function index()
     {
-        $this->view->loadView('welcome_view',array());
+        $this->view->loadView('welcome_view', array());
 
         if ($this->session->getSessionVariable("isLogged") == true) {
-            $this->view->loadView('user_view',array('name'=> "kacper"));
+            $this->view->loadView('user_view', array('name'=> "kacper"));
         } else {
-            $this->view->loadView('login_view',array());
+            $this->view->loadView('login_view', array());
         }
     }
 }
