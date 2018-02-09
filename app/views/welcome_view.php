@@ -27,6 +27,7 @@
     <h1>Welcome!</h1>
     <p>Welcome to small/simple php framework</p>
     <p>You can change this view by editing Home controller</p>
+    <p>Author: Kacper Smal 'SmallDev'</p>
     <h6 id="path">/app/controllers/Home.php</h6>
   </div>
 </body>

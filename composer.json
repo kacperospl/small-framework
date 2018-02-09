@@ -1,8 +1,13 @@
 {
-    "require": {
+  "require": {
 
-        "klein/klein": "^2.1"
+    "klein/klein": "^2.1"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "Framework\\": "framework_core/",
+      "App\\": "app/"
     }
-
-    
+  }
 }

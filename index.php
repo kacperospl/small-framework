@@ -1,14 +1,13 @@
 <?php
 
 namespace Framework;
+define('DOC_ROOT', $_SERVER['DOCUMENT_ROOT']);
 
-  $START_TIME = microtime(TRUE);
+$START_TIME = microtime(true);
 
 require_once 'vendor/autoload.php';
 
-$root = getCWD();
 
-require_once $root. '/framework_core/init.php';
 
 
 $app = new Application();
@@ -18,7 +17,7 @@ $session->startSession();
 
 $app->router->dispatch();
 
-$END_TIME = microtime(TRUE);
+$END_TIME = microtime(true);
 
 $benchmark = $END_TIME - $START_TIME;
 
@@ -28,9 +27,9 @@ printBenchmark($benchmark);
 
 function printBenchmark($benchmark)
 {
-  $config = new \App\Config();
-  if($config->other['benchmark']){
-    echo '
+    $config = new \App\Config();
+    if ($config->other['benchmark']) {
+        echo '
       <style>
         .BenchmarkRes {
           position:absolute;
@@ -39,15 +38,15 @@ function printBenchmark($benchmark)
 
           ';
 
-          if($benchmark>1){
+        if ($benchmark>1) {
             echo 'background-color:red;';
-          }else {
+        } else {
             echo 'background-color:blue;';
-          }
-      echo '
+        }
+        echo '
         }
       </style>
       <p class="BenchmarkRes"> '.$benchmark.' </p>
     ';
-  }
+    }
 }
