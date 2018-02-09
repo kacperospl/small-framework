@@ -6,12 +6,14 @@ abstract class Controller
 {
     protected $session;
     protected $helper;
+    protected $validator;
     protected $view;
     public function __construct()
     {
         $this->session = new \Framework\Utills\Session();
         $this->helper = new \Framework\Utills\Helper();
         $this->view = new View();
+        $this->validator = new \Framework\Utills\Validator();
     }
 
     abstract public function index();

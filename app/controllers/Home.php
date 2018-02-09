@@ -18,5 +18,7 @@ class Home extends \Framework\Core\Controller
         } else {
             $this->view->loadView('login_view', array());
         }
+
+
     }
 }

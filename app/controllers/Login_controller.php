@@ -21,8 +21,8 @@ class Login_controller extends \Framework\Core\Controller
 
     public function login()
     {
-        $login = $_POST['login'];
-        $password = $_POST['password'];
+        $login = $this->validator->post("login");
+        $password = $this->validator->post("password");
 
         if ($this->modelFunction('User_model', 'login', [$login,$password])) {
             $this->session->addSessionVariable('isLogged', true);

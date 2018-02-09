@@ -21,11 +21,11 @@ $END_TIME = microtime(true);
 
 $benchmark = $END_TIME - $START_TIME;
 
-printBenchmark($benchmark);
+printDebug($benchmark);
 
 
 
-function printBenchmark($benchmark)
+function printDebug($benchmark)
 {
     $config = new \App\Config();
     if ($config->other['benchmark']) {
@@ -35,7 +35,7 @@ function printBenchmark($benchmark)
           position:absolute;
           top:0;
           left:0;
-
+          color:white;
           ';
 
         if ($benchmark>1) {
@@ -46,7 +46,13 @@ function printBenchmark($benchmark)
         echo '
         }
       </style>
-      <p class="BenchmarkRes"> '.$benchmark.' </p>
+      <div class="BenchmarkRes">
+      <p> '.$benchmark.' </p>
+      <p>
     ';
+      print_r($_POST);
+      print_r($_GET);
+      echo '</p>';
+      echo '</div>';
     }
 }
