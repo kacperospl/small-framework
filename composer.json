@@ -1,4 +1,11 @@
 {
+  "authors": [
+       {
+           "name": "Kacper Smal",
+           "email": "kacpersmal@gmail.com",
+           "role": "Developer"
+       },
+
   "require": {
 
     "klein/klein": "^2.1"
